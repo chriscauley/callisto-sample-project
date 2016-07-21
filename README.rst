@@ -177,3 +177,8 @@ See detailed `cookiecutter-django Docker documentation`_.
 
 .. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
 
+Quick `docker-compose` guide:
+- In one terminal, at the root of the project, run: `docker-compose -f dev.yml up --build postgres`
+- In another terminal, also at the root of the project, run: `docker-compose -f dev.yml up --build mailhog npm django`
+
+Note: You may need to prepend those commands with `sudo`.
