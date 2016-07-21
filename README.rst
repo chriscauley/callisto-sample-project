@@ -181,8 +181,21 @@ See detailed `cookiecutter-django Docker documentation`_.
 
 .. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
 
-Quick `docker-compose` guide:
-- In one terminal, at the root of the project, run: `docker-compose -f dev.yml up --build postgres`
-- In another terminal, also at the root of the project, run: `docker-compose -f dev.yml up --build mailhog npm django`
+Quick `docker-compose` guide (for development):
+
+* Install `Docker`_ and `docker-compose`_
+
+* In one terminal, at the root of the project, run: ``docker-compose -f dev.yml up --build postgres``
+
+* In another terminal, also at the root of the project, run: ``docker-compose -f dev.yml up --build mailhog npm django``
+
+* If you want to run any ``manage.py`` command (like ``migrate`` or ``shell_plus``), ensure the `django` container is up, and then run
+
+::
+
+  docker-compose -f dev.yml run django python /app/manage.py shell_plus
 
 Note: You may need to prepend those commands with `sudo`.
+
+.. _`Docker`: https://docs.docker.com/engine/installation/
+.. _`docker-compose`: https://docs.docker.com/compose/install/
