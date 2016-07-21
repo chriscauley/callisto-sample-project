@@ -32,7 +32,7 @@ pip install virtualenv # first time only
 virtualenv venv # localize your dependencies
 source venv/bin/activate
 pip install -r requirements_dev.txt
-make test # run tests quickly with the default Python. Prefer this over running ``python runtests.py`` directly.
+./manage.py test
 deactivate # exit virtualenv
 ````
 
