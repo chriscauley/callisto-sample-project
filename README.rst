@@ -10,6 +10,38 @@ This project demonstrates example usage of callisto-core. The hope is to encoura
 
 LICENSE: GPLv3
 
+Setting up a development environment
+------------
+
+Install pip, virtualenv, and npm if you don't have them already.
+
+Clone this repo.
+
+Make a virtual environment::
+
+    $ mkvirtualenv --python=python3 callisto-sample-project
+    
+Install npm depenencies::
+
+  $ npm install
+
+Install pip dependencies::
+
+  $ pip install -r requirements/local.txt
+
+Create a database::
+
+  $ createdb callisto-sample-project
+  
+Run the migrations::
+
+  $ ./manage.py migrate
+  
+Run your first development server::
+
+  $ npm start
+
+
 
 Settings
 ------------
