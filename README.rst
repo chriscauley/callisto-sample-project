@@ -7,8 +7,49 @@ This project demonstrates example usage of callisto-core. The hope is to encoura
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
 
+.. image:: https://codeclimate.com/github/SexualHealthInnovations/callisto-sample-project/badges/gpa.svg
+   :target: https://codeclimate.com/github/SexualHealthInnovations/callisto-sample-project
+   :alt: Code Climate
 
 LICENSE: GPLv3
+
+Code of conduct
+-----------------
+
+This project adheres to a code of conduct(https://github.com/SexualHealthInnovations/callisto-core/blob/master/CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to tech@sexualhealthinnovations.org.
+
+
+Setting up a development environment
+------------
+
+Install pip, virtualenv, and npm if you don't have them already.
+
+Clone this repo.
+
+Make a virtual environment::
+
+    $ mkvirtualenv --python=python3 callisto-sample-project
+
+Install npm depenencies::
+
+  $ npm install
+
+Install pip dependencies::
+
+  $ pip install -r requirements/local.txt
+
+Create a database::
+
+  $ createdb callisto-sample-project
+
+Run the migrations::
+
+  $ ./manage.py migrate
+
+Run your first development server::
+
+  $ npm start
+
 
 
 Settings
@@ -136,4 +177,8 @@ See detailed `cookiecutter-django Docker documentation`_.
 
 .. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
 
+Quick `docker-compose` guide:
+- In one terminal, at the root of the project, run: `docker-compose -f dev.yml up --build postgres`
+- In another terminal, also at the root of the project, run: `docker-compose -f dev.yml up --build mailhog npm django`
 
+Note: You may need to prepend those commands with `sudo`.
