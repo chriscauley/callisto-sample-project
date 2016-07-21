@@ -29,6 +29,10 @@ Install pip dependencies::
 
   $ pip install -r requirements/local.txt
 
+Make Callisto importable (may need to change the path to your virtual environment)::
+
+  $ touch ~/.virtualenvs/callisto-sample-project/lib/python2.7/site-packages/callisto/__init__.py
+
 Create a database::
 
   $ createdb callisto-sample-project
@@ -36,7 +40,8 @@ Create a database::
 Run the migrations::
 
   $ ./manage.py migrate
-  
+
+
 Run your first development server::
 
   $ npm start
