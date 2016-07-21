@@ -89,11 +89,15 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.s
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = (
-    ("""Kevin Daum""", 'kevin.daum@gmail.com'),
+    ("""Sexual Health Innovations""", 'tech@sexualhealthinnovations.org'),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
+
+# This is where reports from users will be sent. This is not the technical admin address. 
+# If this is not changed, no one will receive incident reports.
+COORDINATOR_EMAIL = 'coordinator@example.com'
 
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
