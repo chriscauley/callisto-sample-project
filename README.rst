@@ -77,6 +77,24 @@ Setting Up Your Users
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
+
+Configuring a survey
+^^^^^^^^^^^^^^^^^^^^^
+
+* Initialize the wizard builder with an empty page.
+
+    $ python manage.py shell
+    >>> from wizard_builder.models import QuestionPage
+    >>> QuestionPage.objects.create()
+
+* Log into http://localhost:8000/admin/ with your Django superuser name and password.
+
+* Go to http://localhost:8000/admin/wizard_builder/ and add a Form page.
+
+* Go to http://localhost:8000/reports/new/1, answer the question, and click submit.
+
+* TO DO: have this work :)
+
 Test coverage
 ^^^^^^^^^^^^^
 

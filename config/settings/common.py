@@ -40,6 +40,7 @@ THIRD_PARTY_APPS = (
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'wizard_builder',
+    'polymorphic',
     'callisto.delivery',
     'callisto.evaluation',
 )
@@ -49,6 +50,7 @@ LOCAL_APPS = (
     # custom users app
     'callisto_sample_project.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'callisto_sample_project.core',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
