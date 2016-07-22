@@ -22,7 +22,7 @@ This project adheres to a code of conduct(https://github.com/SexualHealthInnovat
 Setting up a development environment
 ------------
 
-Install pip, virtualenv, and npm if you don't have them already.
+Install pip, virtualenv, virtualenvwrapper, and npm if you don't have them already.
 
 Clone this repo.
 
