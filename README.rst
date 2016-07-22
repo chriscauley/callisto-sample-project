@@ -193,8 +193,7 @@ Quick `docker-compose` guide (for development):
 
 * In another terminal, also at the root of the project, run: ``docker-compose -f dev.yml up --build mailhog npm
   django``. You may have to wait quite some time before webpack finishes building the bundle of static files. If you
-  try to access the site before it's finished, you'll probably see a traceback for ``builtins.OSError: Error reading /app/webpack-stats.json. Are you sure webpack has generated the file and the path is correct?``. Once
-you see ``npm_1       | webpack: bundle is now VALID.``, your django/npm/mailhog server is running.
+  try to access the site before it's finished, you'll probably see a traceback for ``builtins.OSError: Error reading /app/webpack-stats.json. Are you sure webpack has generated the file and the path is correct?``. Once you see ``npm_1       | webpack: bundle is now VALID.``, your django/npm/mailhog server is running.
 
 * If you want to run any ``manage.py`` command (like ``migrate`` or ``shell_plus``), ensure the `django` container is up, and then run
 
