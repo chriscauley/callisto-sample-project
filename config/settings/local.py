@@ -67,3 +67,20 @@ INSTALLED_APPS += ('django_extensions', )
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Your local stuff: Below this line define 3rd party library settings
+REPORT_TIME_ZONE = "America/Chicago"
+DATABASES = {
+    'default': {
+        'ATOMIC_REQUESTS': True,
+        'AUTOCOMMIT': True,
+        'CONN_MAX_AGE': 0,
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': None,
+        'NAME': 'callisto-sample-project',
+        'OPTIONS': {},
+        'PASSWORD': 'postgres',
+        'PORT': None,
+        'TEST': {'CHARSET': None, 'COLLATION': None, 'MIRROR': None, 'NAME': None},
+        'TIME_ZONE': None,
+        'USER': 'postgres'
+    }
+}
