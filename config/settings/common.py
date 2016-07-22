@@ -42,6 +42,7 @@ THIRD_PARTY_APPS = (
     'wizard_builder',
     'callisto.delivery',
     'callisto.evaluation',
+    'polymorphic',
 )
 
 # Apps specific for this project go here.
