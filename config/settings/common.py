@@ -40,7 +40,6 @@ THIRD_PARTY_APPS = (
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'wizard_builder',
-    'polymorphic',
     'callisto.delivery',
     'callisto.evaluation',
     'polymorphic',
