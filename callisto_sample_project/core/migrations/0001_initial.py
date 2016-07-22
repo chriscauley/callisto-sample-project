@@ -5,14 +5,15 @@ from __future__ import unicode_literals
 from django.db import migrations
 
 def wizard_builder_hack(apps,schema_editor):
+    # this is a terrible hack to compensate for the fact that wizard builder can't load in the admin without
+    # some objects in the database
+    # Also, yes, I know I should be using apps.get_model(), but polymorphic has issues that way, I think because 
+    # polymorphics custom save doen't work rith it
     from wizard_builder.models import FormQuestion,QuestionPage
-    QuestionPage = apps.get_model('wizard_builder',"questionpage")
-    FormQuestion = apps.get_model('wizard_builder',"formquestion")
-    if not (QuestionPage.objects.count() and FormQuestion.objects.count()):
-        p=QuestionPage()
-        p.save()
-        f=FormQuestion(page=p)
-        f.save()
+    p=QuestionPage()
+    p.save()
+    f=FormQuestion(page=p)
+    f.save()
 
 class Migration(migrations.Migration):
 
