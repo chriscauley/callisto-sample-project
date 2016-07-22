@@ -22,7 +22,7 @@ This project adheres to a code of conduct(https://github.com/SexualHealthInnovat
 Setting up a development environment
 ------------
 
-Install pip, virtualenv, and npm if you don't have them already.
+Install pip, virtualenv, virtualenvwrapper, and npm if you don't have them already.
 
 Clone this repo.
 
@@ -205,14 +205,13 @@ Quick `docker-compose` guide (for development):
 
 * In one terminal, at the root of the project, run: ``docker-compose -f dev.yml up --build postgres``. It will take
   some time for postgres to install the first time you run the command. The last line of output you will probably see
-  will be something like ``postgres_1  | LOG:  autovacuum launcher started``. That indicates that postgres is ready and
+  will be something like ``postgres_1  | LOG:  autovacuum launcher started`` or ``postgres_1  | LOG:  database system
+  is ready to accept connections``. That indicates that postgres is ready and
   waiting. 
 
 * In another terminal, also at the root of the project, run: ``docker-compose -f dev.yml up --build mailhog npm
   django``. You may have to wait quite some time before webpack finishes building the bundle of static files. If you
-  try to access the site before it's finished, you'll probably see a traceback for ``builtins.OSError
-: Error reading /app/webpack-stats.json. Are you sure webpack has generated the file and the path is correct?``. Once
-you see ``npm_1       | webpack: bundle is now VALID.``, your django/npm/mailhog server is running.
+  try to access the site before it's finished, you'll probably see a traceback for ``builtins.OSError: Error reading /app/webpack-stats.json. Are you sure webpack has generated the file and the path is correct?``. Once you see ``npm_1       | webpack: bundle is now VALID.``, your django/npm/mailhog server is running.
 
 * If you want to run any ``manage.py`` command (like ``migrate`` or ``shell_plus``), ensure the `django` container is up, and then run
 

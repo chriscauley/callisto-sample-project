@@ -43,6 +43,7 @@ THIRD_PARTY_APPS = (
     'polymorphic',
     'callisto.delivery',
     'callisto.evaluation',
+    'polymorphic',
 )
 
 # Apps specific for this project go here.
