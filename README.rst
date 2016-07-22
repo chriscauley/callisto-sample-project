@@ -187,7 +187,8 @@ Quick `docker-compose` guide (for development):
 
 * In one terminal, at the root of the project, run: ``docker-compose -f dev.yml up --build postgres``. It will take
   some time for postgres to install the first time you run the command. The last line of output you will probably see
-  will be something like ``postgres_1  | LOG:  autovacuum launcher started``. That indicates that postgres is ready and
+  will be something like ``postgres_1  | LOG:  autovacuum launcher started`` or ``postgres_1  | LOG:  database system
+  is ready to accept connections``. That indicates that postgres is ready and
   waiting. 
 
 * In another terminal, also at the root of the project, run: ``docker-compose -f dev.yml up --build mailhog npm
